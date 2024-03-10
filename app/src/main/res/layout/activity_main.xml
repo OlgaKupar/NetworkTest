@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextUserInput" />
 
     <Button
-        android:id="@+id/btnCompute"
+        android:id="@+id/buttonCompute"
         android:layout_width="108dp"
         android:layout_height="59dp"
         android:layout_marginStart="185dp"
@@ -57,18 +57,18 @@
         android:layout_marginEnd="96dp"
         android:text="Compute"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/btnSend"
+        app:layout_constraintStart_toStartOf="@id/buttonSend"
         app:layout_constraintTop_toBottomOf="@id/textViewResultOutput" />
 
     <Button
-        android:id="@+id/btnSend"
+        android:id="@+id/buttonSend"
         android:layout_width="109dp"
         android:layout_height="62dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="150dp"
         android:text="Send"
-        app:layout_constraintEnd_toStartOf="@id/btnCompute"
+        app:layout_constraintEnd_toStartOf="@id/buttonCompute"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewResultOutput" />
 
