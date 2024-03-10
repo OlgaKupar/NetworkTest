@@ -13,6 +13,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
 
     ClientTCP clientTCP;
+    Task5 task5;
 
     TextView textViewUserPrompt;
     TextView textViewResultOutput;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.setThreadPolicy(policy);
 
         clientTCP = new ClientTCP();
+        task5 = new Task5();
 
         textViewUserPrompt = findViewById(R.id.textViewUserPrompt);
         textViewResultOutput = findViewById(R.id.textViewResultOutput);
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSend.setOnClickListener(
                 view -> {
-                    String input = editTextUserInput.getText().toString();
+                         String input = editTextUserInput.getText().toString();
 
                     try {
                         String serverAnswer = clientTCP.getServerAnswer(
@@ -52,6 +54,21 @@ public class MainActivity extends AppCompatActivity {
                         throw new RuntimeException(e);
                     }
                 }
+        );
+
+        buttonCompute.setOnClickListener(
+                view -> {
+                    String input = editTextUserInput.getText().toString();
+
+                    try{
+                        String calculationResult = task5.mixDigitASCII(
+                                String.valueOf(Integer.parseInt(input)));
+                        textViewResultOutput.setText("Digits + ASCII: "+calculationResult);
+                    }catch (Exception e){
+                        throw new RuntimeException(e);
+                    }
+                }
+
         );
 
 
