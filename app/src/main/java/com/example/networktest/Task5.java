@@ -14,7 +14,6 @@ public class Task5 {
     public String mixDigitASCII (String MNr)  {
         int [] MNrDigits = new int[8];
         String [] numbCharMNR = new String[8];
-        char a = 97;
         char sign;
         int intMNr = Integer.parseInt(MNr);
         int digit;
